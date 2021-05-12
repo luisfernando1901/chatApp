@@ -14,7 +14,7 @@ export class HomePage {
   constructor(private renderer: Renderer2,
     private http: HttpClient,
     private socket: Socket) {
-    //http.get('http://localhost:3000/').subscribe(params => console.log(params));
+    //http.get('http://localhost:3000/').subscribe(params => console.log(params)); 
     http.get('https://thawing-waters-69626.herokuapp.com/').subscribe(params => console.log(params));
     socket.connect();
     socket.emit("setUsuario",this.usuario);
